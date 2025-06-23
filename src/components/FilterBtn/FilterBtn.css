@@ -1,0 +1,14 @@
+.filtr__btn {
+    padding: 5px 10px;
+    border: 1px solid rgb(162, 160, 160);
+    border-radius: 20px;
+    color: rgb(45, 91, 155);
+    cursor: pointer;
+    background-color: transparent;
+    font-size: medium;
+    font-weight: 700;
+}
+
+.active {
+    background-color: lightgrey;
+}

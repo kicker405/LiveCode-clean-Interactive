@@ -1,0 +1,12 @@
+.error-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.error__h2 {
+    font-weight: 800;
+}
+
+.error__message {
+    color:rgb(178, 31, 31);
+}
