@@ -1,10 +1,15 @@
 .App {
   text-align: center;
+  overflow-x: hidden;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.app__h2 {
+  padding-left: 35px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -26,6 +31,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.card-list {
+  margin-bottom: 50px;
 }
 
 @keyframes App-logo-spin {

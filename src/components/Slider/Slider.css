@@ -1,0 +1,26 @@
+.cards-slider {
+  width: 100%;
+  overflow-x: auto; 
+  white-space: nowrap; 
+  padding: 35px;
+}
+
+.cards-track {
+  display: flex; 
+  gap: 20px; 
+}
+
+.scroll-btns {
+  z-index: 10;
+    display: flex;
+    position: relative;
+    left: 65.5%;
+    gap: 10px;
+}
+
+.scroll-btn {
+  padding: 3px 10px;
+  background-color: rgb(45, 91, 155);
+  color: white;
+  cursor: pointer;
+}

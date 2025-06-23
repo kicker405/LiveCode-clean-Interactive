@@ -1,0 +1,10 @@
+.card__btn {
+    padding: 14px 24px;
+    border: 2px solid rgb(45, 91, 155);
+    border-radius: 40%;
+}
+
+.card__btn:focus {
+    background-color:  rgb(45, 91, 155);
+    color: white;
+}

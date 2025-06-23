@@ -1,0 +1,74 @@
+/* App.css */
+
+.calendar {
+    position: absolute;
+    right: 0%;
+    top: 12%;
+    padding: 15px 25px 30px 25px;
+    background-color: white;
+    text-align: center;
+}
+
+.calendar__header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: white;
+    color: #000;
+}
+
+.calendar__header span {
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 225px;
+}
+
+.calendar-header_btns {
+    display: flex;
+    gap: 50px;
+}
+
+.calendar__header button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.calendar__weekdays {
+    display: flex;
+    gap: 47px;
+    margin-bottom: 10px;
+}
+
+.calendar__days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.calendar__days span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.calendar__days span:hover {
+    background-color: #e0e0e0;
+}
+
+.calendar__days span.selected {
+    background-color: #2196f3;
+    color: white;
+}
+
+.calendar__cell {
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
