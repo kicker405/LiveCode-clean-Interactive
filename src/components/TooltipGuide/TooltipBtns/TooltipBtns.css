@@ -1,11 +1,11 @@
-.window__btns {
+.tooltip__btns {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-.window__cancelBtn {
+.tooltip__cancelBtn {
   text-decoration: none;
   color: #fff;
   font-size: 14px;
@@ -14,7 +14,7 @@
   cursor: pointer;
 }
 
-.window__confirmBtn {
+.tooltip__confirmBtn {
   background-color: #fff;
   color: #6789ff;
   border: none;
@@ -24,6 +24,6 @@
   cursor: pointer;
 }
 
-.window__confirmBtn:hover {
+.tooltip__confirmBtn:hover {
   background-color: #e0e0e0;
 }

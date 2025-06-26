@@ -1,11 +1,13 @@
 import { create } from "zustand";
 
 const guideStore = create((set) => ({
+  learningIsStarted: false,
   canceledGuide: false,
-  currentGuideWindow: 0, 
+  currentTooltipIndex: 0, 
 
+  setLearningIsStarted: () => set({learningIsStarted: true}),
   setCanceledGuid: () => set({canceledGuide: true}),
-  setCurrentGuideWindow: (index) => set({currentGuideWindow: index}),
+  setCurrentTooltipIndex: (index) => set({currentTooltipIndex: index}),
 }));
 
 export default guideStore;

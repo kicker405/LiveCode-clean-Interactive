@@ -39,19 +39,18 @@ export default function ReportsTable({ tableFilters }) {
   }
 
   function getReports() {
-    if (reports.length !== 0) {
-      reports.forEach((report) => {
-        report = {
-          type: report.entityType,
-          date: report.dateReport,
-          number: report.reportNo,
-          description: report.description,
-          event: report.eventCode,
-          reportAlias: report.reportAlias,
-        };
-        data.push(report);
-      })
-    }
+    if (reports.length === 0) return;
+    reports.forEach((report) => {
+      report = {
+        type: report.entityType,
+        date: report.dateReport,
+        number: report.reportNo,
+        description: report.description,
+        event: report.eventCode,
+        reportAlias: report.reportAlias,
+      };
+      data.push(report);
+    })
   }
   
   function filterTableByEventName() {
@@ -67,7 +66,7 @@ export default function ReportsTable({ tableFilters }) {
   filterTableByEventName()
 
   return (
-    <div style={{ maxWidth: "100%" }}>
+    <div id="reportId" style={{ maxWidth: "100%" }}>
       <MaterialReactTable
         columns={columns}
         data={data}

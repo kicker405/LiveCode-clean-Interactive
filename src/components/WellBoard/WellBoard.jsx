@@ -12,12 +12,15 @@ export default function WellBoard({selected, setSelected}) {
     return <p>Данные загружаются...</p>;
   }
 
-  const handleCardClick = (id) => {
-    navigate(`/cards/${id}`); 
-  };
+  const setOnClick = (wellId) => {
+    setEventName(null);
+    setIsPlanReport(false);
+    setSelected(wellId); 
+    navigate(`/cards/${wellId}`);
+  }
 
   return (
-    <div className="card-list">
+    <div id="cardId" className="card-list">
       <Slider>
         <div className="cards-track">
           {cards.map((well) => (
@@ -27,10 +30,7 @@ export default function WellBoard({selected, setSelected}) {
               isSelected={selected === well.wellId}
               onClick={(e) => {
                 e.preventDefault()
-                setEventName(null);
-                setIsPlanReport(false);
-                setSelected(well.wellId); 
-                handleCardClick(well.wellId)
+                setOnClick(well.wellId)
               }}
             />
           ))}

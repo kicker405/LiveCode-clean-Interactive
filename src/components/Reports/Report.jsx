@@ -11,6 +11,7 @@ export default function Report() {
     { value: "CASING", label: "Крепление" },
     { value: "GEN_CMT", label: "Цементирование" },
   ];
+
   let [filters, setFilters] = useState([])
 
   const handleFilterClick = (filterValue) => {
@@ -26,7 +27,7 @@ export default function Report() {
     <div className="reports">
       <div className="reports__filters filters">
         <H2Component >Отчёты</H2Component>
-        <ul className="filters__list">
+        <ul id="reportFiltersId" className="filters__list">
           {filterOptions.map(({ value, label }) => (
             <li key={value} className="filters__list-item">
               <FilterBtn onClick={() => handleFilterClick(value)}>

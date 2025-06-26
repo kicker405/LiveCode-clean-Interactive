@@ -1,18 +1,4 @@
-const BASE_URL = "https://edmrest.dev.burworld.ru/Universal";
-
-const ENTITY = {
-  PROJECT: 'CdProjectSource',
-  SITE: 'CdSiteSource/projectId',
-  WELL: 'CdWellSource/siteId',
-  REPORT: 'DmReportJournal/wellId',
-}
-
-const FIELDS = {
-  PROJECT: 'projectName,projectId',
-  SITE: 'projectId,siteId,siteName',
-  WELL: 'siteId,wellCommonName,wellId,spudDate,reason',
-  REPORT: 'eventCode,reportJournalId,wellId,wellboreId,dateReport,eventId,reportAlias,description,entityType,reportNo',
-} 
+import { BASE_URL, ENTITY, FIELDS } from '../../constants/apiConstants'
 
 const getUrl = (type, id) => {
   let url = `${BASE_URL}/${ENTITY[type]}/${id}/?fields=${FIELDS[type]}`;

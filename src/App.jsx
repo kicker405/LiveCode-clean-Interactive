@@ -4,7 +4,8 @@ import Report from "./components/Reports/Report";
 import WellBoard from "./components/WellBoard/WellBoard";
 import H2Component from "./components/H2Component/H2Component";
 import Error from "./components/Error/Error";
-import RenderGuide from "./components/RenderGuide";
+import RenderGuide from './components/TooltipGuide/RenderGuide'
+import GuideBeginning from "./components/TooltipGuide/GuideBeginning/GuideBeginning";
 import useCardData from "./hooks/useCardData";
 import useReports from "./hooks/useReports";
 import cardStore from "./stores/cardStore";
@@ -17,12 +18,12 @@ export default function App() {
 
   useReports(selected);
 
-  const selectedProjectName =
-    selected && cards.find((card) => card.wellId === selected)?.projectName;
+  const selectedProjectName = selected && cards.find((card) => card.wellId === selected)?.projectName;
 
   return (
     <div className="App">
       <Header />
+      <GuideBeginning />
       <RenderGuide />
       <div className="app__h2">
         <H2Component>{selectedProjectName || "Харасавэйское ГКМ"}</H2Component>

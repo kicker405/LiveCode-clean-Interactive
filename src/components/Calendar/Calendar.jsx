@@ -7,7 +7,7 @@ export default function Calendar() {
   const { currentDate, setCurrentDate, generateDaysArray } = useCalendar();
 
   return (
-    <div className="calendar">
+    <div id="calendarId" className="calendar">
       <div className="calendar__header">
         <span>
           {currentDate.toLocaleString("default", {
