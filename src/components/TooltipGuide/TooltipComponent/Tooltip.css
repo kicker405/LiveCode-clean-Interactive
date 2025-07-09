@@ -43,3 +43,9 @@
   font-size: 14px;
   text-align: left;
 }
+
+.tooltip__circle-content {
+  padding: 10px;
+  text-align: center;
+  color: white;
+}

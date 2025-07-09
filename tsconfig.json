@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                           
+    "module": "ESNext",                       
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], 
+    "allowJs": true,                          // позволяет использовать JS файлы вместе с TS
+    "skipLibCheck": true,                     
+    "esModuleInterop": true,                  
+    "allowSyntheticDefaultImports": true,    
+    "strict": true,                          
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",               
+    "resolveJsonModule": true,                
+    "isolatedModules": true,                   
+    "noEmit": true,                           
+    "jsx": "react-jsx"                        
+  },
+  "include": ["src"]
+}
