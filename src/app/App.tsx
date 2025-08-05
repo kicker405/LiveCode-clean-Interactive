@@ -1,14 +1,10 @@
-import Header from '../widgets/Header/Header'
-import GuideBeginning from '../features/TooltipGuide/ui/GuideBeginning/GuideBeginning';
-import RenderGuide from '../features/TooltipGuide/lib/RenderGuide';
-import H2Component from '../shared/ui/H2Component/H2Component';
-import WellBoard from '../widgets/WellBoard/ui/WellBoard';
-import Report from '../widgets/Reports/ui/Report';
-import Error from '../widgets/Error/ui/Error';
-import { reportStore } from '../shared/models/stores/reportStore'
-import { cardStore } from '../shared/models/stores/cardStore';
+import { Header, WellBoard, Report, Error }  from '../widgets'
+import { GuideBeginning, RenderGuide } from '../features/TooltipGuide'
+import { H2Component } from '../shared/ui';
+import { reportStore, cardStore } from '../shared/models';
 import useCardData from '../entities/Card/models/useCardData';
 import useReports from '../widgets/Reports/models/useReports';
+import ThermometerChart from '../shared/ui/Charts/ui/ThermometerChart';
 
 export default function App() {
   const { isReportError } = reportStore();
@@ -21,6 +17,7 @@ export default function App() {
 
   return (
     <div className="App">
+      {/* <ThermometerChart /> */}
       <Header />
       <GuideBeginning />
       <RenderGuide />

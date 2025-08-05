@@ -5,7 +5,7 @@ import { cardStore } from "../../../shared/models/stores/cardStore";
 import { IChildrenProps } from "../../../shared/models/types/common";
 import { TReport } from "../model/types";
 
-export default function ReportsTable({ children }: IChildrenProps<string[]>) {
+export function ReportsTable({ children }: IChildrenProps<string[]>) {
   const reports = reportStore((state) => state.reports);
   const eventName = cardStore((state) => state.eventName);
   const tableFilters = children;

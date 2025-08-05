@@ -1,13 +1,13 @@
 import "../styles/Card.css";
-import CardBtn from "../../../shared/ui/CardBtn/CardBtn";
+import { CardBtn } from "../../../shared/ui";
 import { cardStore } from "../../../shared/models/stores/cardStore";
 import { ICardProps } from "../models/types/types";
 
-export default function Card({ well, isSelected, onClick }: ICardProps) {
+export function Card({ well, isSelected, onClick }: ICardProps) {
   const { setIsPlanReport } = cardStore();
   const cardBtns = ['БУР', 'ВМР','ОСВ']
 
-  let date = ((well.spudDate) === null ? 'Неизвестна' : String(well.spudDate).slice(0, 10));
+  let date: string | null = ((well.spudDate) === null ? 'Неизвестна' : String(well.spudDate).slice(0, 10));
   
   return (
     <div className={`card ${isSelected ? 'selected' : ''}`} onClick={onClick}>

@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
+import { IElementPosition } from '../../models/types/hooksTypes' 
+
 
 export function useElementPosition(id: string) {
-  const [position, setPosition] = useState<{ top: number; left: number; height: number } | null>(null);
+  const [position, setPosition] = useState<IElementPosition | null>(null);
 
   useEffect(() => {
     const updatePosition = () => {
       const el = document.getElementById(id);
-      if (!el) return;
+      if (!el) {
+        console.warn(`Element with id "${id}" not found`);
+        return
+      };
       const rect = el.getBoundingClientRect();
       setPosition({
         top: rect.top + window.scrollY,

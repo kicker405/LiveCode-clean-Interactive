@@ -1,4 +1,7 @@
 export function handleCardDataError(error: unknown, setError: (msg: string) => void) {
-  const typedError = error as Error;
-  setError(`Ошибка при формировании данных карточек: ${typedError.message}`);
+  if (error instanceof Error) {
+    setError(`Ошибка при формировании данных карточек: ${error.message}`);
+  } else {
+    setError('Неизвестная ошибка при формировании данных карточек');
+  }
 }

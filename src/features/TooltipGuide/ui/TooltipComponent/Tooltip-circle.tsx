@@ -1,9 +1,8 @@
-//import { Stage, Layer, Circle } from "react-konva";
-import TooltipBtns from "../TooltipBtns/TooltipBtns";
+import { TooltipBtns } from "../TooltipBtns/TooltipBtns";
 import { TTooltipProps } from "../../models/types/tooltipComponent";
 import { TPosition } from "../../models/types/tooltipComponent";
 
-export default function TooltipCircle({ data }:TTooltipProps) {
+export function TooltipCircle({ data }:TTooltipProps) {
   let position = {
     position: "absolute" as TPosition,
     top: data.styles.y,

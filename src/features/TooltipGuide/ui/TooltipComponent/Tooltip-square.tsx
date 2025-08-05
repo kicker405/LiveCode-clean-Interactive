@@ -1,8 +1,8 @@
 import "./Tooltip.css";
-import TooltipBtns from "../TooltipBtns/TooltipBtns"; 
+import { TooltipBtns } from "../TooltipBtns/TooltipBtns"; 
 import { TTooltipProps } from "../../models/types/tooltipComponent";
 
-export default function Tooltip({data}: TTooltipProps) {
+export function TooltipSquare({data}: TTooltipProps) {
   return (
   <div className="tooltip">
     <div className="tooltip__content">

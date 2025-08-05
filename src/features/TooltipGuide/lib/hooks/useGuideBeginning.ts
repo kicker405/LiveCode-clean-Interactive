@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { guideStore } from "../../models/stores/guideStore";
+import { IGuideBeginningHook } from "../../models/types/hooksTypes";
 
-export default function useGuideBeginning() {
+
+export default function useGuideBeginning(): IGuideBeginningHook {
   const {setLearningIsStarted, setCanceledGuid} = guideStore();
   const [isVisible, setIsVisible] = useState<boolean>(true);
 

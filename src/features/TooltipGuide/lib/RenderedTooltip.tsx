@@ -1,5 +1,5 @@
-import TooltipSquare from "../ui/TooltipComponent/Tooltip-square";
-import TooltipCircle from "../ui/TooltipComponent/Tooltip-circle";
+import {TooltipSquare} from "../ui/TooltipComponent/Tooltip-square";
+import {TooltipCircle} from "../ui/TooltipComponent/Tooltip-circle";
 import { useTooltipPosition } from "./hooks/useTooltipPosition";
 import { IChildrenProps } from "../../../shared/models/types/common";
 

@@ -1,11 +1,12 @@
 import "../styles/Report.css";
-import ReportsTable from "../../../entities/ReportsTable/ui/ReportsTable";
-import H2Component from "../../../shared/ui/H2Component/H2Component";
-import FilterBtn from "../../../shared/ui/FilterBtn/ui/FilterBtn";
+import { ReportsTable } from "../../../entities/ReportsTable";
+import { H2Component, FilterBtn } from '../../../shared/ui'
 import { useState } from "react";
+import { TFilterOption } from "../models/types";
 
-export default function Report() {
-  const filterOptions = [
+
+export function Report() {
+  const filterOptions:TFilterOption[] = [
     { value: "DDR", label: "Суточный" },
     { value: "GEN_PLAN", label: "Планирование" },
     { value: "CASING", label: "Крепление" },
@@ -14,7 +15,7 @@ export default function Report() {
 
   let [filters, setFilters] = useState<string[]>([])
 
-  const handleFilterClick = (filterValue:string) => {
+  const handleFilterClick = (filterValue:string): void => {
     setFilters((prevFilters:string[]) => {
       if (prevFilters.includes(filterValue)) {
         return prevFilters.filter((f) => f !== filterValue);

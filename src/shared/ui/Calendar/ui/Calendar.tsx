@@ -1,7 +1,7 @@
 import "../styles/Calendar.css";
 import useCalendar from "../models/useCalendar";
 
-export default function Calendar() {
+export function Calendar() {
   const weekdays: string[] = ["Вс", "Пон", "Вт", "Ср", "Чт", "Пт", "Суб"];
   const selectedDate: number = new Date().getDate()
   const { currentDate, setCurrentDate, generateDaysArray } = useCalendar();

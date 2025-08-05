@@ -2,7 +2,7 @@ import '../styles/FilterBtn.css'
 import { useState } from "react";
 import { TFilterBtnProps } from '../model/types';
 
-export default function FilterBtn({ children, onClick }: TFilterBtnProps) {
+export function FilterBtn({ children, onClick }: TFilterBtnProps) {
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = () => {

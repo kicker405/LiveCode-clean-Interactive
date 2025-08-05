@@ -1,4 +1,5 @@
-import { IProject, ISite, IWell, TCard } from "../models/types/types";
+import { TCard } from "../models/types/types";
+import { IProject, ISite, IWell } from '../../../shared/models'
 
 export function mapWellsToCards(wells: IWell[], sites: ISite[], projects: IProject[]): TCard[] {
   return wells.map((well) => {

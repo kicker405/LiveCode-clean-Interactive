@@ -1,0 +1,1 @@
+export { H2Component } from './H2Component'

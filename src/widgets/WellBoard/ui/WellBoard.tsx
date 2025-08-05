@@ -1,12 +1,11 @@
-import Card from "../../../entities/Card/ui/Card";
-import Calendar from "../../../shared/ui/Calendar/ui/Calendar";
-import Slider from "../../../shared/ui/Slider/Slider";
+import { Card } from '../../../entities/Card'
+import { Calendar, Slider } from "../../../shared/ui";
 import { useNavigate } from "react-router";
-import { cardStore } from "../../../shared/models/stores/cardStore";
+import { cardStore } from "../../../shared/models";
 import { TWellBoardProps } from "../models/types";
 
 
-export default function WellBoard({selected, setSelected}:TWellBoardProps) {
+export function WellBoard({selected, setSelected}:TWellBoardProps) {
   const { cards, setEventName, setIsPlanReport } = cardStore();
   const navigate = useNavigate();
 

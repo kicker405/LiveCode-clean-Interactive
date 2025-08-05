@@ -3,7 +3,7 @@ import { JSX } from "react";
 import { useRef } from "react";
 import { IChildrenProps } from "../../models/types/common";
 
-export default function Slider({children}: IChildrenProps<JSX.Element>) {
+export function Slider({children}: IChildrenProps<JSX.Element>) {
   const sliderRef = useRef<HTMLDivElement>(null);
 
   function scroll(type: string) {

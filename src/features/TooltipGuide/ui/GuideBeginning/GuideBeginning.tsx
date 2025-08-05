@@ -1,7 +1,7 @@
 import "./GuideBeginning.css";
 import useGuideBeginning from "../../lib/hooks/useGuideBeginning";
 
-export default function GuideBeginning() {
+export function GuideBeginning() {
   const { isVisible, startGuide, finishGuide } = useGuideBeginning();
 
   return isVisible ? (

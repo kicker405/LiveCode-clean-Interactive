@@ -1,8 +1,8 @@
 import "./CardBtn.css";
-import { cardStore } from "../../models/stores/cardStore";
+import { cardStore } from "../../models";
 import { IChildrenProps } from "../../models/types/common";
 
-export default function CardBtn({children}: IChildrenProps<string>) {
+export function CardBtn({children}: IChildrenProps<string>) {
     const setEventName = cardStore((state) => state.setEventName) 
 
     return (

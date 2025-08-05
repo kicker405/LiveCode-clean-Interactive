@@ -1,7 +1,7 @@
 import "./TooltipBtns.css";
 import { guideStore }from "../../models/stores/guideStore";
 
-export default function TooltipBtns() {
+export function TooltipBtns() {
   const { currentTooltipIndex, setCurrentTooltipIndex, setCanceledGuid } = guideStore();
   
   return (

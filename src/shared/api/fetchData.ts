@@ -1,5 +1,3 @@
-import { tryCatchError } from "./catchError";
-
 export async function fetchData(url: string) {
   const response = await fetch(url);
 
@@ -7,9 +5,8 @@ export async function fetchData(url: string) {
     throw new Error(`Ошибка при запросе: ${response.status} ${response.statusText}`);
   }
 
-  const text = await response.text();
+  const text: string = await response.text();
 
-  // Пустой ответ? Вернём null или {}
   if (!text) return null;
 
   try {
